@@ -123,4 +123,14 @@ public class SudokuBaseContainerTest {
         assertFalse(row.equals(clone));
         assertNotEquals(row.hashCode(), clone.hashCode());
     }
+
+    //Izzy Added new test
+    @Test
+    void testVerify_invalidArgument() {
+
+        SudokuRow row = new SudokuRow();
+        row.getFields()[5].setValue(15);
+        assertFalse(row.verify());
+
+    }
 }
